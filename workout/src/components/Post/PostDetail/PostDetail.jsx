@@ -4,8 +4,6 @@ import { v4 } from 'uuid';
 const PostDetail = ({post}) => {
   const {productDetail, productimages, productPrice} = styles
   const {images, price, title, description} = post;
-
-  console.log(post);
   return (
     <>
       <div className={productDetail}>
@@ -15,7 +13,12 @@ const PostDetail = ({post}) => {
           ))}
         </div>
         <h1>{title}</h1>
-        <p className={productPrice}>{price}</p>
+        <p className={productPrice}>
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(price)}
+        </p>
         <p>{description}</p>
       </div>
     </>

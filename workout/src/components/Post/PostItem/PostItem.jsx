@@ -13,7 +13,12 @@ const PostItem = ({post}) => {
           <img src={images[0]} alt="image description" />
         </div>
         <div className={postDescr}>
-          <span className={badge}>{price}</span>
+          <span className={badge}>
+            {new Intl.NumberFormat('en-US', {
+              style: 'currency',
+              currency: 'USD',
+            }).format(price)}
+          </span>
           <h3 className={postTitle}>{title}</h3>
           <p>{description}</p>
         </div>

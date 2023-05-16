@@ -3,6 +3,7 @@ import { useState } from 'react';
 import styles from './CTA.module.scss';
 import Button from '../Button/Button';
 import Popup from '../Popup/Popup';
+import LoginForm from '../LoginForm/LoginForm';
 
 const CTA = () => {
   const {cta, title} = styles;
@@ -24,7 +25,9 @@ const CTA = () => {
         <Button  onClick={handleClick}>Free Lesson</Button>
       </div>
 
-      <Popup isOpen={isOpen} onClose={handleClose}/>
+      <Popup isOpen={isOpen} onClose={handleClose}>
+        <LoginForm />
+      </Popup>
     </>
   )
 }

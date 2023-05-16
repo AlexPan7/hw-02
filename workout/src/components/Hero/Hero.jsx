@@ -16,7 +16,7 @@ const Hero = () => {
         <Button>Get Started</Button>
         <Button $primary>Preview</Button>
       </div>
-      <img className={heroImg} src="./images/img-hero.jpg" alt="girl" />
+      <img className={heroImg} src="./images/img-hero.png" alt="girl" />
       <ul className={infoLabels}>
         <li className={label}>
           <strong className={styles.markYellow}>38:14</strong>

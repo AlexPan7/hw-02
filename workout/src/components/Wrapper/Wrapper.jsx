@@ -1,17 +1,10 @@
 import styles from './Wrapper.module.scss';
-import { useTheme } from '../../context/ThemeContext';
 
 const Wrapper = ({ children }) => {
-  const {wrapper, light, toggleThemeBtn} = styles;
-  const { darkMode, toggleTheme } = useTheme();
-
-  const handleClick = () => {
-    toggleTheme();
-  };
+  const {wrapper} = styles;
 
   return <>
-      <button className={toggleThemeBtn} onClick={handleClick}>Toggle theme</button>
-      <div className={darkMode ? `${wrapper} dark` : `${wrapper} ${light}`}>{ children }</div>
+      <div className={wrapper}>{ children }</div>
   </>
 }
 

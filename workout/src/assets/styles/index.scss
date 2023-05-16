@@ -15,6 +15,11 @@ body {
   font: var(--text-base)/1.8125 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+.light {
+  background: #ccc;
+  color: var(--black-color);
+}
+
 #root {
   overflow: hidden;
   min-height: 100vh;
